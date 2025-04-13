@@ -1,7 +1,7 @@
 const int buzzerPin = 3;  // Piezo buzzer connected to pin 3
 
-const int TONE_LEFT = 294;      // D4
-const int TONE_RIGHT = 587;     // D5
+const int TONE_LEFT = 1000;      // D4
+const int TONE_RIGHT = 500;     // D5
 const int TONE_OBSTACLE = 880;  // A5
 
 const int SHORT_BEEP = 150;
@@ -30,7 +30,7 @@ void loop() {
     // Only beep if command is new or has changed
     if (command != lastCommand) {
       lastCommand = command;
-      hasBeeped = false;  // Allow one beep for the new command
+      hasBeeped = false; 
     }
   }
 
