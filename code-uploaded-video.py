@@ -1,4 +1,4 @@
-#This code is the one meant to help our system deal with uploaded videos, when we conduct tests that do not necessarily involve the camera as a source of video or image input
+"""This code is the one meant to help our system deal with uploaded videos, when we conduct tests that do not necessarily involve the camera as a source of video or image input."""
 
 !pip install -q ultralytics opencv-python numpy torch torchvision #for Google Colab
 
@@ -83,7 +83,7 @@ class LaneDetector:
                 elif slope > 0 and x1 > img_center and x2 > img_center:
                     right_lines.append(line[0])
         
-        # Draw lanes on image
+       
         img_with_lanes = image.copy()
         
         if left_lines:
@@ -119,7 +119,7 @@ uploaded_path = list(uploaded.keys())[0]
 print("Uploaded:", uploaded_path)
 file_ext = os.path.splitext(uploaded_path)[-1]
 
-# Define processing functions
+# Defining processing functions
 def get_lane_guidance(image, lanes):
     h, w, _ = image.shape
     image_center = w // 2
@@ -142,7 +142,7 @@ def get_lane_guidance(image, lanes):
     x_coords = [p[0] for p in bottom_points]
     lane_center = sum(x_coords) // len(x_coords)
     
-    # Determine guidance
+
     if abs(image_center - lane_center) < 30:
         return "You're centered"
     elif image_center > lane_center:
