@@ -1,3 +1,5 @@
+//This code is the one used in the Arduino IDE to the establish the connection with the rest of our program//
+
 const int buzzerPin = 3;  // Piezo buzzer connected to pin 3
 
 const int TONE_LEFT = 1000;      // D4
