@@ -1,5 +1,4 @@
-
-#install required dependencies
+#This code is the one meant to help our system deal with uploaded videos, when we conduct tests that do not necessarily involve the camera as a source of video or image input
 
 !pip install -q ultralytics opencv-python numpy torch torchvision #for Google Colab
 
@@ -297,7 +296,7 @@ elif file_ext.lower() in ['.mp4', '.avi', '.mov']:
     </video>
     """))
     
-    # Offer download
+ 
     files.download('result_video.mp4')
 
 else:
