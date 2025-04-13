@@ -1,3 +1,6 @@
+"""This code is meant to be for the standard functioning of our system, through the webcam. ALthough this configuration remains only a modelisation of our vision which involves
+smaller, more mobile hardware."""
+
 from ultralytics import YOLO
 import cv2
 import numpy as np
